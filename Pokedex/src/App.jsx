@@ -30,14 +30,14 @@ useEffect(() => {
 return (
   <div>
     <h2 className='text-center'>Liste des Pokémon</h2>
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 shadow-lg '>
       {pokemonList.map((pokemon, index) => (
-        <div key={index} className='bg-grey-400 '>
-          <img src={pokemon.image} alt={pokemon.name} width="106" height="106" className='bg-blue-100 m-5 rounded-full'/>
-          <div className=''>
+        <div key={index} className='bg-gray-400 m-20 shadow-xl h-50 w-45'>
+          <img src={pokemon.image} alt={pokemon.name} width="106" height="106" className='bg-blue-100 m-8 rounded-full'/>
+          <div className='bg-red-500 text-center'>
             <div className='flex flex-row'>
               <p>id : </p>
-              <p> {index + 1}</p>
+              <p className=' text-center'> {index + 1}</p>
             </div>
             <div className='flex flex-row'>
               <p>nom : </p>
