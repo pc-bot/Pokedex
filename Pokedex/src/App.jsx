@@ -30,9 +30,9 @@ useEffect(() => {
 return (
   <div>
     <h2 className=''>Liste des Pokémon</h2>
-    <div className='bg-red grid'>
+    <div className='bg-red grid grid-flow-col grid-rows-3 gap-4'>
       {pokemonList.map((pokemon, index) => (
-        <div key={index}>
+        <div key={index} className='col-span-2'>
           <img src={pokemon.image} alt={pokemon.name} width="96" height="96" />
           <h1 />
           {pokemon.name}
