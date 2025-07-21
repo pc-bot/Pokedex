@@ -27,7 +27,12 @@ useEffect(() => {
 }, []);
 
   return (
-  <div className='font-bold bg-red-300'>hello world</div>
+      <div>
+      <div>{pokemonList.map((pokemon,id) => (
+        <div></div>
+      ))}</div>
+ 
+    </div>
   )
 }
 
