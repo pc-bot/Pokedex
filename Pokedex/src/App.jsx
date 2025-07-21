@@ -34,7 +34,7 @@ return (
       {pokemonList.map((pokemon, index) => (
         <div key={index} className=''>
           <img src={pokemon.image} alt={pokemon.name} width="96" height="96" />
-          <div className='bg-yellow-300'>
+          <div className='bg-yellow 300'>
             <div className='flex flex-row'>
               <p>id : </p>
               <p>{index + 1}</p>
