@@ -29,7 +29,7 @@ useEffect(() => {
 
 return (
   <div>
-    <h2>Liste des Pokémon</h2>
+    <h2 className=''>Liste des Pokémon</h2>
     <div className='bg-red grid'>
       {pokemonList.map((pokemon, index) => (
         <div key={index}>
