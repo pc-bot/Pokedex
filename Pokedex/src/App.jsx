@@ -29,7 +29,9 @@ useEffect(() => {
   return (
       <div>
       <div>{pokemonList.map((pokemon,id) => (
-        <div></div>
+        <div key={id}>
+          <img src={pokemon.image} alt="" />
+        </div>
       ))}</div>
  
     </div>
