@@ -1,10 +1,11 @@
 import { useState } from 'react'
+import { useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-   const [pokemonList, setPokemonList] = useState([]);
+const [pokemonList, setPokemonList] = useState([]);
 
 useEffect(() => {
   fetch('https://pokeapi.co/api/v2/pokedex/1/')
@@ -26,16 +27,21 @@ useEffect(() => {
     .catch((error) => console.error("Erreur :", error));
 }, []);
 
-  return (
-      <div>
-      <div>{pokemonList.map((pokemon,id) => (
-        <div key={id}>
-          <img src={pokemon.image} alt="" />
+return (
+  <div>
+    <h2>Liste des Pokémon</h2>
+    <div className='bg-red grid'>
+      {pokemonList.map((pokemon, index) => (
+        <div key={index}>
+          <img src={pokemon.image} alt={pokemon.name} width="96" height="96" />
+          <h1 />
+          {pokemon.name}
+          <h1 />
         </div>
-      ))}</div>
- 
+      ))}
     </div>
-  )
+  </div>
+)
 }
 
 export default App
