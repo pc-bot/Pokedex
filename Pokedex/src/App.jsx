@@ -29,14 +29,21 @@ useEffect(() => {
 
 return (
   <div>
-    <h2 className=''>Liste des Pokémon</h2>
-    <div className='bg-red grid grid-flow-col grid-rows-3 gap-4'>
+    <h2 className='text-center'>Liste des Pokémon</h2>
+    <div className=''>
       {pokemonList.map((pokemon, index) => (
-        <div key={index} className='col-span-2'>
+        <div key={index} className=''>
           <img src={pokemon.image} alt={pokemon.name} width="96" height="96" />
-          <h1 />
-          {pokemon.name}
-          <h1 />
+          <div className='bg-yellow-300'>
+            <div className='flex flex-row'>
+              <p>id : </p>
+              <p>{index + 1}</p>
+            </div>
+            <div className='flex flex-row'>
+              <p>nom : </p>
+              <p />{pokemon.name}<p/>
+            </div>
+          </div>
         </div>
       ))}
     </div>
